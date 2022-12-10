@@ -125,8 +125,6 @@ const run = () => {
     const square = lines.map(line => line.split(''))
     const numberSquare = square.map(line => line.map(char => parseInt(char)))
     console.table(numberSquare)
-    // create a clone of numberSquare , filled with false
-    const visibilitySquare = numberSquare.map(line => line.map(_char => false))
     const totalsSquare = numberSquare.map(line => line.map(_char => 0))
 
 

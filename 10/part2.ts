@@ -28,7 +28,7 @@ const drawPixel = () => {
 
 
 export const run = () => {
-    lines.forEach((line, index: number) => {
+    lines.forEach((line) => {
         const [_command, value] = line.split(' ')
 
         if (!value) { // noop
@@ -65,7 +65,7 @@ export const run = () => {
     console.log(pixels)
 
     // split pixels into chunks of length 40
-    const chunks = _.chunk(pixels, 40).map(line => line.join(''));
+    const chunks = (<string[][]>_.chunk(pixels, 40)).map(line => line.join(''));
     // const chunks: string[][] = _.chunk(pixels, 40)//.map(line => line.join(''));
     // // map over chunks and join each line
     // chunks.forEach(line => {
