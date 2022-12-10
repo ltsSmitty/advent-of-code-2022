@@ -6,8 +6,8 @@ import * as helpers from '../helpers.ts'
 import * as _ from 'https://cdn.skypack.dev/lodash';
 
 
-const lines = await helpers.readLinesFromTextFile('input.txt')
-// const lines = await helpers.readLinesFromTextFile('example-input.txt')
+// const lines = await helpers.readLinesFromTextFile('input.txt')
+const lines = await helpers.readLinesFromTextFile('example-input.txt')
 
 const getLineVisibility = (line: number[]): boolean[] => {
     const visibility: boolean[] = [];
@@ -120,7 +120,7 @@ const calculateTreeVisibilityScore = (x: number, y: number, row: number[], colum
 }
 
 
-const run = async () => {
+const run = () => {
     // split lines by character to make into a square array
     const square = lines.map(line => line.split(''))
     const numberSquare = square.map(line => line.map(char => parseInt(char)))
